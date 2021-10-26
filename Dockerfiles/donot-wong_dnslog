@@ -1,0 +1,15 @@
+FROM python:3.7-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        sqlite3 ncurses-bin git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone https://github.com/donot-wong/dnslog.git /usr/src/app
+
+WORKDIR /usr/src/app
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
