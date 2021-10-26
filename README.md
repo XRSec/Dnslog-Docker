@@ -12,7 +12,7 @@
 - weblog/dnslog平台 Docker容器化部署
 
 ```bash
-docker run -it -d -p 8080:80 xrsec/dnslog:donot-wong_dnslog
+docker run -it -d -p 8080:8000 xrsec/dnslog:donot-wong_dnslog
 ```
 
 
