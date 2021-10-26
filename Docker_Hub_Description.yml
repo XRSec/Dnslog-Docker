@@ -1,0 +1,17 @@
+name: Docker Hub Description
+  
+on:
+  push
+
+jobs:
+   Docker_Hub_Description:
+    needs: Build_For_Code_Server_Init
+    runs-on: ubuntu-latest
+    steps:
+   	  - 
+        name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/dnslog
