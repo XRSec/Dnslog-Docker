@@ -30,9 +30,9 @@ jobs:
         with:
           context: .
           platforms: linux/arm64,linux/amd64
-          file: guacd/Dockerfile
+          file: Dockerfiles/donot-wong_dnslog
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/dnslog:donot-wong_dnslog
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/next-terminal:donot-wong_dnslog.cache
-          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/next-terminal:donot-wong_dnslog.cache,mode=max
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:donot-wong_dnslog.cache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:donot-wong_dnslog.cache,mode=max
