@@ -62,7 +62,7 @@ jobs:
           with:
             context: .
             platforms: linux/arm64,linux/amd64
-            file: Dockerfiles/BlueLotus_XSSReceiver
+            file: Dockerfiles/trysec_bluelotus_xssreceiver
             push: true
             tags: |
               ${{ secrets.DOCKERHUB_USERNAME }}/dnslog:trysec_bluelotus_xssreceiver
