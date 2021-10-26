@@ -1,5 +1,7 @@
 FROM python:3.7-slim
-
+LABEL maintainer="xrsec"
+LABEL mail="troy@zygd.site"
+LABEL Github="https://github.com/XRSec"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         sqlite3 ncurses-bin git \
