@@ -33,6 +33,6 @@ jobs:
           file: Dockerfiles/BlueLotus_XSSReceiver
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/dnslog:bluelotus_xssreceiver
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:bluelotus_xssreceiver.cache
-          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:bluelotus_xssreceiver.cache,mode=max
+            ${{ secrets.DOCKERHUB_USERNAME }}/dnslog:trysec_bluelotus_xssreceiver
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:trysec_bluelotus_xssreceiver.cache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/dnslog:trysec_bluelotus_xssreceiver.cache,mode=max
