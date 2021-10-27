@@ -21,3 +21,8 @@ RUN sed -i '436 a \ \ \ \ AddType application/x-httpd-php .php' /usr/local/apach
   && sed -i "s|LoadModule mpm_event_module modules/mod_mpm_event.so|#LoadModule mpm_event_module modules/mod_mpm_event.so|g" /usr/local/apache2/conf/httpd.conf \
   && chown -R www-data:www-data /usr/local/apache2/htdocs/ \
   && chmod -R 777 /usr/local/apache2/htdocs/
+
+EXPOSE 80
+ENV TZ='Asia/Shanghai'
+ENV LANG 'zh_CN.UTF-8'
+STOPSIGNAL SIGQUIT
