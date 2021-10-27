@@ -5,14 +5,14 @@ LABEL Github="https://github.com/XRSec"
 
 RUN apt-get update \
     && apt-get install -y sqlite3 ncurses-bin git \
-    && apt-get install -y --no-install-recommends sqlite3 ncurses-bin git \
+#    && apt-get install -y --no-install-recommends sqlite3 ncurses-bin git \
     && apt clean -y \
 
 RUN git clone https://github.com/donot-wong/dnslog.git /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN pip install -r requirements.txt
+RUN pip install -r /usr/src/app/requirements.txt
 
 EXPOSE 8000
 ENV TZ='Asia/Shanghai'
