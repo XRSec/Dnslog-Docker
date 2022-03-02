@@ -1,7 +1,9 @@
 FROM python:3.7-slim
 LABEL maintainer="xrsec"
 LABEL mail="troy@zygd.site"
-LABEL Github="https://github.com/XRSec"
+LABEL Github="https://github.com/XRSec/Dnslog-Docker"
+LABEL org.opencontainers.image.source="https://github.com/XRSec/Dnslog-Docker"
+LABEL org.opencontainers.image.title="Dnslog-Docker"
 
 RUN apt-get update \
     && apt-get install -y sqlite3 ncurses-bin git \
