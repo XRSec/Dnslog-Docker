@@ -73,7 +73,7 @@ jobs:
 
   Docker_Hub_Description:
     needs: [Docker_donot-wong_dnslog_Build, Docker_trysec_BlueLotus_XSSReceiver_Build]
-    name: Docker Build PHP_INIT
+    name: DDocker Hub Description
     runs-on: ubuntu-latest
     steps:
       - 
