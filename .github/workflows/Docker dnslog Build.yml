@@ -2,7 +2,9 @@
 name: Docker dnslog Build
 
 on:
-  push
+  workflow_dispatch:
+  watch:
+    types: [started]
 
 jobs:
   Docker_donot-wong_dnslog_Build:
