@@ -1,6 +1,6 @@
 FROM httpd
 LABEL maintainer="xrsec"
-LABEL mail="troy@zygd.site"
+LABEL mail="Jalapeno1868@outlook.com"
 LABEL Github="https://github.com/XRSec/Dnslog-Docker"
 LABEL org.opencontainers.image.source="https://github.com/XRSec/Dnslog-Docker"
 LABEL org.opencontainers.image.title="Dnslog-Docker"
@@ -11,7 +11,7 @@ RUN apt update -y && apt upgrade -y \
 
 RUN rm /usr/local/apache2/htdocs/* \
   && git clone https://github.com/trysec/BlueLotus_XSSReceiver.git /usr/local/apache2/htdocs
-  
+
 RUN sed -i '436 a \ \ \ \ AddType application/x-httpd-php .php' /usr/local/apache2/conf/httpd.conf \
   && sed -i ":a;N;s/AllowOverride none\n    Require all denied/AllowOverride none\n    Require all granted/g" /usr/local/apache2/conf/httpd.conf \
   && sed -i "s/DirectoryIndex index.html/DirectoryIndex index.html index.php/g" /usr/local/apache2/conf/httpd.conf \
